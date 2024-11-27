@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_field_background"
                 android:hint="Enter Your Email"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textColor="@color/gray"
                 android:textSize="12dp" />
         </com.google.android.material.textfield.TextInputLayout>
