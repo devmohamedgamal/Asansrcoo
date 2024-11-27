@@ -73,6 +73,7 @@
             app:passwordToggleEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/NameField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_field_background"
@@ -89,6 +90,7 @@
             app:passwordToggleEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EmailField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_field_background"
@@ -125,6 +127,7 @@
             app:passwordToggleEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/NumberField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_field_background"
@@ -141,6 +144,7 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PasswordField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_field_background"
@@ -150,9 +154,26 @@
                 android:textSize="12dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ConfermPasswordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_field_background"
+                android:hint="Enter Conferm Password"
+                android:inputType="textPassword"
+                android:textColor="@color/gray"
+                android:textSize="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button4"
+            android:id="@+id/SignUpBtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
@@ -173,6 +194,7 @@
 
 
         <LinearLayout
+            android:id="@+id/googleAuthBtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
@@ -220,7 +242,13 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

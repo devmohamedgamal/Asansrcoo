@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Asansrcoo</string>
     <string name="todo">TODO</string>
+    <string name="default_web_client_id">623624313802-k6qrj6vn5birv2bud4ptsbnaqo71agq4.apps.googleusercontent.com</string>
 </resources>

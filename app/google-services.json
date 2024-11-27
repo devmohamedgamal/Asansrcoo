@@ -8,42 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:623624313802:android:87a16641f79d6ee0904d33",
-        "android_client_info": {
-          "package_name": "com.example.asansercoo"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "623624313802-jva9ilv24kv9jk2258fdumj8tuivfdjd.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCFxpfqV8tVlVzKwiGwWoW7jDHYftl5ODI"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "623624313802-jva9ilv24kv9jk2258fdumj8tuivfdjd.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "623624313802-9pdn0jupbgk9rkac0dfqja52kbo9rkq3.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.mapsApp"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:623624313802:android:b6ae718e86dc687f904d33",
         "android_client_info": {
           "package_name": "com.example.asansrcoo"
@@ -51,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "623624313802-jva9ilv24kv9jk2258fdumj8tuivfdjd.apps.googleusercontent.com",
+          "client_id": "623624313802-k6qrj6vn5birv2bud4ptsbnaqo71agq4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
