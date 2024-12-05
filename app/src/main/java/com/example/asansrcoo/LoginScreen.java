@@ -40,6 +40,8 @@ public class LoginScreen extends AppCompatActivity {
     private Button loginButton;
     private FirebaseAuth firebaseAuth;
 
+    private ProgressBar progressBar;
+
     private static final int RC_SIGN_IN = 123; // Request code for Google Sign-In
     private GoogleSignInClient googleSignInClient;
 
@@ -83,6 +85,7 @@ public class LoginScreen extends AppCompatActivity {
         emailEditText = findViewById(R.id.EmailField);
         passwordEditText = findViewById(R.id.PasswordField);
         loginButton = findViewById(R.id.LoginBtn);
+        progressBar = findViewById(R.id.progressBar);
 
         // Initialize Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance();
@@ -123,10 +126,14 @@ public class LoginScreen extends AppCompatActivity {
                 return;
             }
 
+            // Show progress bar
+            progressBar.setVisibility(View.VISIBLE);
+
             // Authenticate user
             firebaseAuth.signInWithEmailAndPassword(email, password)
 
                     .addOnCompleteListener(task -> {
+                        progressBar.setVisibility(View.GONE);
                         if (task.isSuccessful()) {
                             // Login successful
                             Toast.makeText(LoginScreen.this, "Login Successful!", Toast.LENGTH_SHORT).show();

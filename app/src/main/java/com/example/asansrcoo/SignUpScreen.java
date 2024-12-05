@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -31,6 +32,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
@@ -213,10 +216,24 @@ public class SignUpScreen extends AppCompatActivity {
                         // Sign-in success
                         FirebaseUser user = firebaseAuth.getCurrentUser();
                         Log.d("FirebaseAuth", "Sign-in successful. User: " + user.getEmail());
-                        Toast.makeText(SignUpScreen.this, "Welcome " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(SignUpScreen.this, MainActivity.class);
-                        startActivity(intent);
-                        finish(); // Ensure the login screen is removed from the back stack
+
+
+                        // read and write user detials
+                        ReadandWriteUserDetials writeUserDetials = new ReadandWriteUserDetials(nameEditText.getText().toString().trim(),emailEditText.getText().toString().trim(),nummberEditText.getText().toString().trim());
+
+                        // Extracting user reference from database
+                        DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
+                        referenceProfile.child(user.getUid()).setValue(writeUserDetials).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Toast.makeText(SignUpScreen.this, "Welcome " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(SignUpScreen.this, MainActivity.class);
+                                startActivity(intent);
+                                finish(); // Ensure the login screen is removed from the back stack
+                            }
+                        });
+
+
                     } else {
                         // Sign-in failed
                         Log.w("FirebaseAuth", "Sign-in failed", task.getException());

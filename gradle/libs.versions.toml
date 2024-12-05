@@ -11,6 +11,10 @@ googleServices = "4.4.2"
 firebaseAuth = "23.1.0"
 firebaseFirestore = "25.1.1"
 google-auth = "21.2.0"
+firebaseDatabase = "21.0.0"
+glide = "4.15.0"
+picasso = "2.8"
+
 
 [libraries]
 google-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "google-auth" }
@@ -24,6 +28,10 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 google-services = { group = "com.google.gms", name = "google-services", version.ref = "googleServices" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+glide = {group = "com.github.bumptech.glide", name = "glide", version.ref = "glide"}
+picasso = {group = "com.squareup.picasso", name = "picasso", version.ref = "picasso"}
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
