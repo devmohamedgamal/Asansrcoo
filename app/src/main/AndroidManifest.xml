@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Asansrcoo"
         tools:targetApi="31">
         <activity
-            android:name=".Home"
+            android:name=".itemDetials"
             android:exported="false" />
         <activity
             android:name=".category"

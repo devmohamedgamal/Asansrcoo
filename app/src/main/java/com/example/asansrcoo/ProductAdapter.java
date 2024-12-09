@@ -3,6 +3,7 @@ import static java.security.AccessController.getContext;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Parcel;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,7 @@ public class ProductAdapter extends BaseAdapter {
         ImageView  productImageUrl = convertView.findViewById(R.id.product_image);
         TextView productName = convertView.findViewById(R.id.product_name);
         TextView productPrice = convertView.findViewById(R.id.product_price);
+//        TextView productDescription = convertView.findViewById(R.id.tvDescriptionValue);
 
         productName.setText(product.getName());
 
@@ -62,6 +64,7 @@ public class ProductAdapter extends BaseAdapter {
                 .into(productImageUrl);
 
         productPrice.setText("price : " + product.getPrice() + "$");
+//        productDescription.setText(product.getDescription());
 
         return convertView;
     }
