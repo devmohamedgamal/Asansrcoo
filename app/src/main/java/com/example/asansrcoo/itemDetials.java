@@ -20,7 +20,6 @@ import java.util.Objects;
 
 public class itemDetials extends AppCompatActivity {
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

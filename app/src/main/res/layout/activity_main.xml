@@ -7,165 +7,174 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="NotSibling">
+    </FrameLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:background="#F5F5F5">-->
+
+<!--        &lt;!&ndash; Toolbar &ndash;&gt;-->
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/colorPrimary"-->
+<!--            android:elevation="4dp"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Asansrcoo"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_gravity="center" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/logoutBtn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:text="Logout"-->
+<!--                android:textColor="@color/red"-->
+<!--                tools:layout_editor_absoluteX="169dp"-->
+<!--                tools:layout_editor_absoluteY="728dp"-->
+<!--                tools:ignore="MissingConstraints" />-->
+<!--        </androidx.appcompat.widget.Toolbar>-->
+
+<!--        &lt;!&ndash; Search Bar &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="#FFFFFF"-->
+<!--            android:elevation="4dp">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/search_bar"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:hint="Search..."-->
+<!--                android:padding="10dp"-->
+<!--                android:background="@drawable/ssearch_bar_background"-->
+<!--                android:drawableLeft="@drawable/search_icon"-->
+<!--                android:drawablePadding="8dp" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/filter"-->
+<!--                android:padding="10dp"-->
+<!--                android:contentDescription="Filter" />-->
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Categories &ndash;&gt;-->
+<!--        <HorizontalScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp"-->
+<!--            android:background="#FFFFFF">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:backgroundTint="#FF6200EE"-->
+<!--                    android:text="الكل"-->
+<!--                    android:textColor="#FFFFFF" />-->
+
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:backgroundTint="#FF6200EE"-->
+<!--                    android:text="الصيانه"-->
+<!--                    android:textColor="#FFFFFF" />-->
+
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:backgroundTint="#FF6200EE"-->
+<!--                    android:text="قطع الغيار"-->
+<!--                    android:textColor="#FFFFFF" />-->
+
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:backgroundTint="#FF6200EE"-->
+<!--                    android:text="العمال"-->
+<!--                    android:textColor="#FFFFFF" />-->
+<!--            </LinearLayout>-->
+<!--        </HorizontalScrollView>-->
+
+
+
+<!--        &lt;!&ndash; Featured Products &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="المنتجات الجديده"-->
+<!--            android:padding="10dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18sp" />-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="16dp">-->
+
+<!--                <ListView-->
+<!--                    android:id="@+id/product_list_view"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="555dp"-->
+<!--                    android:clipToPadding="false"-->
+<!--                    android:divider="@android:color/transparent"-->
+<!--                    android:dividerHeight="10dp" />-->
+<!--            </LinearLayout>-->
+<!--        -->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+
+
+<!--    </LinearLayout>-->
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#F5F5F5">
-
-        <!-- Toolbar -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Asansrcoo"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:layout_gravity="center" />
-
-            <Button
-                android:id="@+id/logoutBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text="Logout"
-                android:textColor="@color/red"
-                tools:layout_editor_absoluteX="169dp"
-                tools:layout_editor_absoluteY="728dp"
-                tools:ignore="MissingConstraints" />
-        </androidx.appcompat.widget.Toolbar>
-
-        <!-- Search Bar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="horizontal"
-            android:background="#FFFFFF"
-            android:elevation="4dp">
-
-            <EditText
-                android:id="@+id/search_bar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Search..."
-                android:padding="10dp"
-                android:background="@drawable/ssearch_bar_background"
-                android:drawableLeft="@drawable/search_icon"
-                android:drawablePadding="8dp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/filter"
-                android:padding="10dp"
-                android:contentDescription="Filter" />
-        </LinearLayout>
-
-        <!-- Categories -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:background="#FFFFFF">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#FF6200EE"
-                    android:text="الكل"
-                    android:textColor="#FFFFFF" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:backgroundTint="#FF6200EE"
-                    android:text="الصيانه"
-                    android:textColor="#FFFFFF" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:backgroundTint="#FF6200EE"
-                    android:text="قطع الغيار"
-                    android:textColor="#FFFFFF" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:backgroundTint="#FF6200EE"
-                    android:text="العمال"
-                    android:textColor="#FFFFFF" />
-            </LinearLayout>
-        </HorizontalScrollView>
-
-
-
-        <!-- Featured Products -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="المنتجات الجديده"
-            android:padding="10dp"
-            android:textStyle="bold"
-            android:textSize="18sp" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <ListView
-                    android:id="@+id/product_list_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="555dp"
-                    android:clipToPadding="false"
-                    android:divider="@android:color/transparent"
-                    android:dividerHeight="10dp" />
-            </LinearLayout>
-
-            <FrameLayout
-                android:id="@+id/main_content"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <!-- Bottom Navigation Bar -->
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottomNavigationView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:background="?attr/colorPrimary"
-                app:menu="@menu/bottom_nav_menu" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="?attr/colorPrimary"
+        app:menu="@menu/bottom_nav_menu" />
 
 
 

@@ -6,11 +6,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".category">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green_blue"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+        app:title= ""
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/arrow_left"
+        tools:ignore="MissingConstraints" />
     <GridView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/category_grid_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
         android:horizontalSpacing="8dp"
         android:verticalSpacing="8dp"
         android:numColumns="2"
